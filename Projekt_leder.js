@@ -142,7 +142,3 @@ document.getElementById("button1").addEventListener("click", getNoElevationTrail
 
 document.getElementById("button2").addEventListener("click", getElevationTrails);
 });
-document.getElementById("button1").addEventListener("click", getNoElevationTrails);
-
-document.getElementById("button2").addEventListener("click", getElevationTrails);
-});
