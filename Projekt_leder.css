@@ -3,4 +3,33 @@
 		margin: 0;
 		height: 100%;
 		width: 100%;
-	  }
+}
+#buttonPanel{
+		  position: absolute;
+		  top: 20px;
+		  left: 60px; 
+}
+body{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+html{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+#button1{
+	width: 230px;
+	height: 50px;
+	border-color: black;
+	background-color: #EDF2FB;
+}
+#button2{
+	width: 230px;
+	height: 50px;
+	border-color: black;
+	background-color: #FED8B1;
+}
