@@ -28,20 +28,23 @@ require([
         zoom: 9
 	});
 	
-	map.on("load", function() {
-		function addCustomMarker(lat, lng, name) {
-			var point = new Point(lng, lat);
-			var symbol = new PictureMarkerSymbol({
-				"url": "poi.png",
-				"width": 15,
-				"height": 15
-			});
-			
-			var graphic = new Graphic(point, symbol);
-			graphic.setAttributes({"name": name});
-			
-			map.graphics.add(graphic);
-		}
+	var infoTemplate = new InfoTemplate("${name}", "Namn: ${name}");
+
+    map.on("load", function() {
+    function addCustomMarker(lat, lng, name) {
+        var point = new Point(lng, lat);
+        var symbol = new PictureMarkerSymbol({
+            "url": "poi.png",
+            "width": 15,
+            "height": 15
+        });
+        var graphic = new Graphic(point, symbol);
+
+        graphic.setAttributes({"name": name});
+        
+        graphic.setInfoTemplate(infoTemplate);
+        map.graphics.add(graphic);
+    }
 		
 		//Färnebofjärden
 		addCustomMarker(60.14311, 16.48877, "Bårbyhällan");
@@ -135,6 +138,10 @@ require([
     });
 }
 
+document.getElementById("button1").addEventListener("click", getNoElevationTrails);
+
+document.getElementById("button2").addEventListener("click", getElevationTrails);
+});
 document.getElementById("button1").addEventListener("click", getNoElevationTrails);
 
 document.getElementById("button2").addEventListener("click", getElevationTrails);
