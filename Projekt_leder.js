@@ -61,24 +61,25 @@ require([
 		addCustomMarker(60.13012, 16.47824, "Strångnäs", "Strangnas.png", "Rastplats");
 		
 		//Gysinge
-		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "CafeUdden.png", "Hej");
-		addCustomMarker(60.16877, 16.48372, "Paddla Edsviken", "PaddlaEdsviken.png", "Hej");
-		addCustomMarker(60.15752, 16.5023, "Gärdsvekarna", "Gardsvekarna.png", "Hej");
-		addCustomMarker(60.17277, 16.53181, "Gysinge", "Gysinge.png", "Hej");
-		addCustomMarker(60.15225, 16.47666, "Ista", "Ista.png", "Hej");
-		addCustomMarker(60.15747, 16.48537, "Karlhomen", "Karlholmen.png", "Hej");
+		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "CafeUdden.png", "Cafe/Restaurang");
+		addCustomMarker(60.16877, 16.48372, "Paddla Edsviken", "PaddlaEdsviken.png", "Paddling");
+		addCustomMarker(60.15752, 16.5023, "Gärdsvekarna", "Gardsvekarna.png", "Rastplats");
+		addCustomMarker(60.17277, 16.53181, "Gysinge", "Gysinge.png", "Naturreservat");
+		addCustomMarker(60.15225, 16.47666, "Ista", "Ista.png", "Naturreservat");
+		addCustomMarker(60.15747, 16.48537, "Karlhomen", "Karlholmen.png", "Vindskydd");
 		
 		//Hedesundafjärden
-		addCustomMarker(60.21955, 17.1938, "Åshuvudet", "Ashuvudet.png", "Hej");
-		addCustomMarker(60.19891, 17.1291, "Festplatsen", "Festplatsen.png", "Hej");
-		addCustomMarker(60.20745, 17.3406, "Gnupe", "Gnupe.png", "Hej");
-		addCustomMarker(60.17909, 17.222, "Hade", "Hade.png", "Hej");
-		addCustomMarker(60.19183, 17.1946, "Korsnäset", "Korsnaset.png", "Hej");
-		addCustomMarker(60.22312, 17.2812, "Kvillanudden", "Kvillanudden.png", "Hej");
+		addCustomMarker(60.21955, 17.1938, "Åshuvudet", "Ashuvudet.png", "Rastplats");
+		addCustomMarker(60.19891, 17.1291, "Festplatsen", "Festplatsen.png", "Grillplats");
+		addCustomMarker(60.20745, 17.3406, "Gnupe", "Gnupe.png", "Rastplats");
+		addCustomMarker(60.17909, 17.222, "Hade", "Hade.png", "Rastplats");
+		addCustomMarker(60.19183, 17.1946, "Korsnäset", "Korsnaset.png", "Rastplats");
+		addCustomMarker(60.22312, 17.2812, "Kvillanudden", "Kvillanudden.png", "Naturreservat");
 		//addCustomMarker(60.22302, 0, "Norra Sundet");
-		addCustomMarker(60.22987, 17.5701, "Östveda", "Ostveda.png", "Hej");
-		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "Sandsnasbadet.png", "Hej");
-		addCustomMarker(60.1872, 17.2239, "Södra Sundet", "SodraSundet.png", "Hej");
+		addCustomMarker(60.22987, 17.5701, "Östveda", "Ostveda.png", "Rastplats");
+		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "Sandsnasbadet.png", "Badplats");
+		addCustomMarker(60.1872, 17.2239, "Södra Sundet", "SodraSundet.png", "Rastplats");
+		
 	});
 	
     async function fetchNoElevationData(file){
