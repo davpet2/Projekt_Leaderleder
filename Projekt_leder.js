@@ -28,10 +28,10 @@ require([
         zoom: 9
 	});
 	
-    var infoTemplate = new InfoTemplate("${name}", "<b>Namn:</b> ${name}<br/><img src='${Bild}' width='100' height='100'>");
+    var infoTemplate = new InfoTemplate("${name}", "<b>Namn:</b> ${name}<br/><img src='${Bild}' width='120' height='100'><br/><b>Beskrivning:</b> ${Beskrivning}");
 
     map.on("load", function() {
-        function addCustomMarker(lat, lng, name, picture) {
+        function addCustomMarker(lat, lng, name, picture, description) {
             var point = new Point(lng, lat);
             var symbol = new PictureMarkerSymbol({
                 "url": "poi.png",
@@ -40,45 +40,45 @@ require([
             });
             var graphic = new Graphic(point, symbol);
 
-            graphic.setAttributes({"name": name, "Bild": picture});
+            graphic.setAttributes({"name": name, "Bild": picture, "Beskrivning": description});
         
             graphic.setInfoTemplate(infoTemplate);
             map.graphics.add(graphic);
         }
 		
 		//Färnebofjärden
-		addCustomMarker(60.14311, 16.48877, "Bårbyhällan", "Barbyhallan.png");
-		addCustomMarker(60.10663, 16.48095, "Båtsportklubben", "Batsportklubben.png");
-		addCustomMarker(60.13159, 16.50868, "Brattnäset", "Brattnaset.png");
-		addCustomMarker(60.14203, 16.47466, "Dragsheden öst", "DragshedenOst.png");
-		addCustomMarker(60.14346, 16.47136, "Dragsheden väst", "DragshedenVast.png");
-		addCustomMarker(60.1187, 16.44909, "Göknäset", "Goknaset.png");
-		addCustomMarker(60.10404, 16.47415, "Östa Camping", "OstaCamping.png");
-		addCustomMarker(60.10672, 16.47674, "Östa norr", "OstaNorr.png");
-		addCustomMarker(60.10565, 16.47127, "Östa väst", "OstaVast.png");
-		addCustomMarker(60.12585, 16.47325, "Sandön", "Sandon.png");
-		addCustomMarker(60.12755, 16.51035, "Skekarsbo", "Skekarsbo.png");
-		addCustomMarker(60.13012, 16.47824, "Strångnäs", "Strangnas.png");
+		addCustomMarker(60.14311, 16.48877, "Bårbyhällan", "Barbyhallan.png", "Hej");
+		addCustomMarker(60.10663, 16.48095, "Båtsportklubben", "Batsportklubben.png", "Hej");
+		addCustomMarker(60.13159, 16.50868, "Brattnäset", "Brattnaset.png", "Hej");
+		addCustomMarker(60.14203, 16.47466, "Dragsheden öst", "DragshedenOst.png", "Hej");
+		addCustomMarker(60.14346, 16.47136, "Dragsheden väst", "DragshedenVast.png", "Hej");
+		addCustomMarker(60.1187, 16.44909, "Göknäset", "Goknaset.png", "Hej");
+		addCustomMarker(60.10404, 16.47415, "Östa Camping", "OstaCamping.png", "Hej");
+		addCustomMarker(60.10672, 16.47674, "Östa norr", "OstaNorr.png", "Hej");
+		addCustomMarker(60.10565, 16.47127, "Östa väst", "OstaVast.png", "Hej");
+		addCustomMarker(60.12585, 16.47325, "Sandön", "Sandon.png", "Hej");
+		addCustomMarker(60.12755, 16.51035, "Skekarsbo", "Skekarsbo.png", "Hej");
+		addCustomMarker(60.13012, 16.47824, "Strångnäs", "Strangnas.png", "Hej");
 		
 		//Gysinge
-		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "CafeUdden.png");
-		addCustomMarker(60.16877, 16.48372, "Paddla Edsviken", "PaddlaEdsviken.png");
-		addCustomMarker(60.15752, 16.5023, "Gärdsvekarna", "Gardsvekarna.png");
-		addCustomMarker(60.17277, 16.53181, "Gysinge", "Gysinge.png");
-		addCustomMarker(60.15225, 16.47666, "Ista", "Ista.png");
-		addCustomMarker(60.15747, 16.48537, "Karlhomen", "Karlholmen.png");
+		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "CafeUdden.png", "Hej");
+		addCustomMarker(60.16877, 16.48372, "Paddla Edsviken", "PaddlaEdsviken.png", "Hej");
+		addCustomMarker(60.15752, 16.5023, "Gärdsvekarna", "Gardsvekarna.png", "Hej");
+		addCustomMarker(60.17277, 16.53181, "Gysinge", "Gysinge.png", "Hej");
+		addCustomMarker(60.15225, 16.47666, "Ista", "Ista.png", "Hej");
+		addCustomMarker(60.15747, 16.48537, "Karlhomen", "Karlholmen.png", "Hej");
 		
 		//Hedesundafjärden
-		addCustomMarker(60.21955, 17.1938, "Åshuvudet", "Ashuvudet.png");
-		addCustomMarker(60.19891, 17.1291, "Festplatsen", "Festplatsen.png");
-		addCustomMarker(60.20745, 17.3406, "Gnupe", "Gnupe.png");
-		addCustomMarker(60.17909, 17.222, "Hade", "Hade.png");
-		addCustomMarker(60.19183, 17.1946, "Korsnäset", "Korsnaset.png");
-		addCustomMarker(60.22312, 17.2812, "Kvillanudden", "Kvillanudden.png");
+		addCustomMarker(60.21955, 17.1938, "Åshuvudet", "Ashuvudet.png", "Hej");
+		addCustomMarker(60.19891, 17.1291, "Festplatsen", "Festplatsen.png", "Hej");
+		addCustomMarker(60.20745, 17.3406, "Gnupe", "Gnupe.png", "Hej");
+		addCustomMarker(60.17909, 17.222, "Hade", "Hade.png", "Hej");
+		addCustomMarker(60.19183, 17.1946, "Korsnäset", "Korsnaset.png", "Hej");
+		addCustomMarker(60.22312, 17.2812, "Kvillanudden", "Kvillanudden.png", "Hej");
 		//addCustomMarker(60.22302, 0, "Norra Sundet");
-		addCustomMarker(60.22987, 17.5701, "Östveda", "Ostveda.png");
-		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "Sandsnasbadet.png");
-		addCustomMarker(60.1872, 17.2239, "Södra Sundet", "SodraSundet.png");
+		addCustomMarker(60.22987, 17.5701, "Östveda", "Ostveda.png", "Hej");
+		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "Sandsnasbadet.png", "Hej");
+		addCustomMarker(60.1872, 17.2239, "Södra Sundet", "SodraSundet.png", "Hej");
 	});
 	
     async function fetchNoElevationData(file){
