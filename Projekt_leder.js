@@ -47,18 +47,18 @@ require([
         }
 		
 		//Färnebofjärden
-		addCustomMarker(60.14311, 16.48877, "Bårbyhällan", "Barbyhallan.png", "Hej");
-		addCustomMarker(60.10663, 16.48095, "Båtsportklubben", "Batsportklubben.png", "Hej");
-		addCustomMarker(60.13159, 16.50868, "Brattnäset", "Brattnaset.png", "Hej");
-		addCustomMarker(60.14203, 16.47466, "Dragsheden öst", "DragshedenOst.png", "Hej");
-		addCustomMarker(60.14346, 16.47136, "Dragsheden väst", "DragshedenVast.png", "Hej");
-		addCustomMarker(60.1187, 16.44909, "Göknäset", "Goknaset.png", "Hej");
-		addCustomMarker(60.10404, 16.47415, "Östa Camping", "OstaCamping.png", "Hej");
-		addCustomMarker(60.10672, 16.47674, "Östa norr", "OstaNorr.png", "Hej");
-		addCustomMarker(60.10565, 16.47127, "Östa väst", "OstaVast.png", "Hej");
-		addCustomMarker(60.12585, 16.47325, "Sandön", "Sandon.png", "Hej");
-		addCustomMarker(60.12755, 16.51035, "Skekarsbo", "Skekarsbo.png", "Hej");
-		addCustomMarker(60.13012, 16.47824, "Strångnäs", "Strangnas.png", "Hej");
+		addCustomMarker(60.14311, 16.48877, "Bårbyhällan", "Barbyhallan.png", "Rastplats");
+		addCustomMarker(60.10663, 16.48095, "Båtsportklubben", "Batsportklubben.png", "Rastplats");
+		addCustomMarker(60.13159, 16.50868, "Brattnäset", "Brattnaset.png", "Rastplats");
+		addCustomMarker(60.14203, 16.47466, "Dragsheden öst", "DragshedenOst.png", "Rastplats");
+		addCustomMarker(60.14346, 16.47136, "Dragsheden väst", "DragshedenVast.png", "Rastplats");
+		addCustomMarker(60.1187, 16.44909, "Göknäset", "Goknaset.png", "Rastplats");
+		addCustomMarker(60.10404, 16.47415, "Östa Camping", "OstaCamping.png", "Rastplats");
+		addCustomMarker(60.10672, 16.47674, "Östa norr", "OstaNorr.png", "Rastplats");
+		addCustomMarker(60.10565, 16.47127, "Östa väst", "OstaVast.png", "Rastplats");
+		addCustomMarker(60.12585, 16.47325, "Sandön", "Sandon.png", "Naturvärde");
+		addCustomMarker(60.12755, 16.51035, "Skekarsbo", "Skekarsbo.png", "Rastplats");
+		addCustomMarker(60.13012, 16.47824, "Strångnäs", "Strangnas.png", "Rastplats");
 		
 		//Gysinge
 		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "CafeUdden.png", "Hej");
