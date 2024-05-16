@@ -51,17 +51,15 @@ require([
 			case "Cafe/Restaurang":
 			    symbolUrl = "cafe.png";
 				break;
-                        /*case "Paddling":
-			    symbolUrl = "paddling.png";
-				break;*/
+            case "Paddling":
+			    symbolUrl = "paddla.png";
+				break;
 			case "Grillplats":
 			    symbolUrl = "grillplats.png";
 				break;
-			/*case "Badplats":
+			case "Badplats":
 			    symbolUrl = "badplats.png";
-				break;*/
-            default:
-                symbolUrl = "poi.png";
+				break;
         }
 
         var symbol = new PictureMarkerSymbol({
@@ -78,37 +76,37 @@ require([
     }
 		
 		//Färnebofjärden
-		addCustomMarker(60.14311, 16.48877, "Bårbyhällan", "poiBilder/Barbyhallan.png", "Rastplats, Vindskydd");
+		addCustomMarker(60.14311, 16.48877, "Bårbyhällan", "poiBilder/Barbyhallan.png", "Rastplats");
 		addCustomMarker(60.10663, 16.48095, "Båtsportklubben", "poiBilder/Batsportklubben.png", "Rastplats");
-		addCustomMarker(60.13159, 16.50868, "Brattnäset", "poiBilder/Brattnaset.png", "Rastplats, Vindskydd");
+		addCustomMarker(60.13159, 16.50868, "Brattnäset", "poiBilder/Brattnaset.png", "Rastplats");
 		addCustomMarker(60.14203, 16.47466, "Dragsheden öst", "poiBilder/DragshedenOst.png", "Rastplats");
 		addCustomMarker(60.14346, 16.47136, "Dragsheden väst", "poiBilder/DragshedenVast.png", "Rastplats");
 		addCustomMarker(60.1187, 16.44909, "Göknäset", "poiBilder/Goknaset.png", "Rastplats");
 		addCustomMarker(60.10404, 16.47415, "Östa Camping", "poiBilder/OstaCamping.png", "Rastplats");
-		addCustomMarker(60.10672, 16.47674, "Östa norr", "poiBilder/OstaNorr.png", "Rastplats, Vindskydd");
+		addCustomMarker(60.10672, 16.47674, "Östa norr", "poiBilder/OstaNorr.png", "Rastplats");
 		addCustomMarker(60.10565, 16.47127, "Östa väst", "poiBilder/OstaVast.png", "Rastplats");
 		addCustomMarker(60.12585, 16.47325, "Sandön", "poiBilder/Sandon.png", "Naturvärde");
-		addCustomMarker(60.12755, 16.51035, "Skekarsbo", "poiBilder/Skekarsbo.png", "Rastplats, Vindskydd");
+		addCustomMarker(60.12755, 16.51035, "Skekarsbo", "poiBilder/Skekarsbo.png", "Rastplats");
 		addCustomMarker(60.13012, 16.47824, "Strångnäs", "poiBilder/Strangnas.png", "Rastplats");
 		
 		//Gysinge
 		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "poiBilder/CafeUdden.png", "Cafe/Restaurang");
 		addCustomMarker(60.16877, 16.48372, "Paddla Edsviken", "poiBilder/PaddlaEdsviken.png", "Paddling");
-		addCustomMarker(60.15752, 16.5023, "Gärdsvekarna", "poiBilder/Gardsvekarna.png", "Rastplats, Raststuga");
+		addCustomMarker(60.15752, 16.5023, "Gärdsvekarna", "poiBilder/Gardsvekarna.png", "Rastplats");
 		addCustomMarker(60.17277, 16.53181, "Gysinge", "poiBilder/Gysinge.png", "Naturreservat");
 		addCustomMarker(60.15225, 16.47666, "Ista", "poiBilder/Ista.png", "Naturreservat");
-		addCustomMarker(60.15747, 16.48537, "Karlhomen", "poiBilder/Karlholmen.png", "Vindskydd, Rastplats");
+		addCustomMarker(60.15747, 16.48537, "Karlhomen", "poiBilder/Karlholmen.png", "Vindskydd");
 		
 		//Hedesundafjärden
 		addCustomMarker(60.21955, 17.1938, "Åshuvudet", "poiBilder/Ashuvudet.png", "Rastplats");
 		addCustomMarker(60.19891, 17.1291, "Festplatsen", "poiBilder/Festplatsen.png", "Grillplats");
-		addCustomMarker(60.20745, 17.3406, "Gnupe", "poiBilder/Gnupe.png", "Rastplats, Grillplats, Vindskydd, Vägbom");
-		addCustomMarker(60.17909, 17.222, "Hade", "poiBilder/Hade.png", "Rastplats, Badplats");
+		addCustomMarker(60.20745, 17.3406, "Gnupe", "poiBilder/Gnupe.png", "Rastplats");
+		addCustomMarker(60.17909, 17.222, "Hade", "poiBilder/Hade.png", "Rastplats");
 		addCustomMarker(60.19183, 17.1946, "Korsnäset", "poiBilder/Korsnaset.png", "Rastplats");
 		addCustomMarker(60.22312, 17.2812, "Kvillanudden", "poiBilder/Kvillanudden.png", "Naturreservat");
 		//addCustomMarker(60.22302, 0, "Norra Sundet");
-		addCustomMarker(60.22987, 17.5701, "Östveda", "poiBilder/Ostveda.png", "Rastplats, Badplats, Toalett");
-		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "poiBilder/Sandsnasbadet.png", "Badplats, Cafe/Restaurang, Camping, Rastplats, Toalett");
+		addCustomMarker(60.22987, 17.5701, "Östveda", "poiBilder/Ostveda.png", "Rastplats");
+		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "poiBilder/Sandsnasbadet.png", "Badplats");
 		addCustomMarker(60.1872, 17.2239, "Södra Sundet", "poiBilder/SodraSundet.png", "Rastplats");
 		
 	});
