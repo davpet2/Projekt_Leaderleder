@@ -33,3 +33,67 @@ html{
 	border-color: black;
 	background-color: #FED8B1;
 }
+#button3{
+	background:url("rastplats.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
+#button4{
+	background:url("naturvarde.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
+#button5{
+	background:url("naturreservat.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
+#button6{
+	background:url("vindskydd.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
+#button7{
+	background:url("cafe.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
+#button8{
+	background:url("paddla.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
+#button9{
+	background:url("grillplats.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
+#button10{
+	background:url("badplats.png");
+	width: 56px;
+	height: 50px;
+	border-color: black;
+	background-size: cover;
+	text-indent: -9999px;
+}
