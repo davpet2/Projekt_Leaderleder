@@ -48,7 +48,7 @@ require([
 			case "Vindskydd":
 			    symbolUrl = "vindskydd.png";
 				break;
-			case "Cafe/Restaurang":
+			case "Cafe":
 			    symbolUrl = "cafe.png";
 				break;
             case "Paddling":
@@ -90,7 +90,7 @@ require([
 		addCustomMarker(60.13012, 16.47824, "Strångnäs", "poiBilder/Strangnas.png", "Rastplats");
 		
 		//Gysinge
-		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "poiBilder/CafeUdden.png", "Cafe/Restaurang");
+		addCustomMarker(60.17273, 16.5287, "Cafe Udden", "poiBilder/CafeUdden.png", "Cafe");
 		addCustomMarker(60.16877, 16.48372, "Paddla Edsviken", "poiBilder/PaddlaEdsviken.png", "Paddling");
 		addCustomMarker(60.15752, 16.5023, "Gärdsvekarna", "poiBilder/Gardsvekarna.png", "Rastplats");
 		addCustomMarker(60.17277, 16.53181, "Gysinge", "poiBilder/Gysinge.png", "Naturreservat");
@@ -109,6 +109,53 @@ require([
 		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "poiBilder/Sandsnasbadet.png", "Badplats");
 		addCustomMarker(60.1872, 17.2239, "Södra Sundet", "poiBilder/SodraSundet.png", "Rastplats");
 		
+		var selectedCategories = [];
+
+document.getElementById("button3").addEventListener("click", function() {
+    toggleMarkers("Rastplats");
+});
+document.getElementById("button4").addEventListener("click", function() {
+    toggleMarkers("Naturvärde");
+});
+document.getElementById("button5").addEventListener("click", function() {
+    toggleMarkers("Naturreservat");
+});
+document.getElementById("button6").addEventListener("click", function() {
+    toggleMarkers("Vindskydd");
+});
+document.getElementById("button7").addEventListener("click", function() {
+    toggleMarkers("Cafe");
+});
+document.getElementById("button8").addEventListener("click", function() {
+    toggleMarkers("Paddling");
+});
+document.getElementById("button9").addEventListener("click", function() {
+    toggleMarkers("Grillplats");
+});
+document.getElementById("button10").addEventListener("click", function() {
+    toggleMarkers("Badplats");
+});
+
+function toggleMarkers(category) {
+
+    var index = selectedCategories.indexOf(category);
+    if (index === -1) {
+        selectedCategories.push(category);
+    } else {
+        selectedCategories.splice(index, 1);
+    }
+    
+    map.graphics.graphics.forEach(function(graphic) {
+    var attributes = graphic.attributes;
+    if (attributes && attributes.Beskrivning) {
+        if (selectedCategories.indexOf(attributes.Beskrivning) !== -1) {
+            graphic.show();
+        } else {
+            graphic.hide();
+        }
+    }
+});
+}
 	});
 	
     async function fetchNoElevationData(file){
