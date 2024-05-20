@@ -30,6 +30,9 @@ require([
 	
     var infoTemplate = new InfoTemplate("${name}", "<b>Namn:</b> ${name}<br/><img src='${Bild}' width='120' height='100'><br/><b>Beskrivning:</b> ${Beskrivning}");
 
+    var tempPOILayer = new GraphicsLayer();
+	map.addLayer(tempPOILayer);
+
     map.on("load", function() {
     function addCustomMarker(lat, lng, name, picture, description) {
         var point = new Point(lng, lat);
@@ -224,7 +227,7 @@ function toggleMarkers(category) {
       .setColor(new Color([233, 237, 237, 0.3]));
 	  
 	  var pointGraphic = new Graphic(poiMarker, markerSymbol);
-      map.graphics.add(pointGraphic);
+          tempPOILayer.add(pointGraphic);
     });	
 	
 
