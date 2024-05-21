@@ -107,7 +107,7 @@ require([
 		addCustomMarker(60.17909, 17.222, "Hade", "poiBilder/Hade.png", "Rastplats");
 		addCustomMarker(60.19183, 17.1946, "Korsnäset", "poiBilder/Korsnaset.png", "Rastplats");
 		addCustomMarker(60.22312, 17.2812, "Kvillanudden", "poiBilder/Kvillanudden.png", "Naturreservat");
-		//addCustomMarker(60.22302, 0, "Norra Sundet");
+		addCustomMarker(60.22302, 17.02733, "Norra Sundet", "poiBilder/NorraSundet.png", "Rastplats");
 		addCustomMarker(60.22987, 17.5701, "Östveda", "poiBilder/Ostveda.png", "Rastplats");
 		addCustomMarker(60.21013, 17.1919, "Sandsnäsbadet", "poiBilder/Sandsnasbadet.png", "Badplats");
 		addCustomMarker(60.1872, 17.2239, "Södra Sundet", "poiBilder/SodraSundet.png", "Rastplats");
@@ -159,47 +159,47 @@ require([
             toggleMarkers("Badplats");
         });
 
-        async function fetchNoElevationData(file) {
-            const url = "https://raw.githubusercontent.com/davpet2/Projekt_Leaderleder/main/Biking_walking_no_elevation/";
+        async function fetchHikingData(file) {
+            const url = "https://raw.githubusercontent.com/davpet2/Projekt_Leaderleder/main/Hiking/";
             const response = await fetch(url + file);
             return response.json();
         }
         
-        async function fetchElevationData(file) {
-            const url = "https://raw.githubusercontent.com/davpet2/Projekt_Leaderleder/main/biking_walking_with_elevation/";
+        async function fetchBikingData(file) {
+            const url = "https://raw.githubusercontent.com/davpet2/Projekt_Leaderleder/main/Biking/";
             const response = await fetch(url + file);
             return response.json();
         }
 
-        var noElevationTrailsLayer = new GraphicsLayer();
-        var elevationTrailsLayer = new GraphicsLayer();
+        var hikingTrailsLayer = new GraphicsLayer();
+        var bikingTrailsLayer = new GraphicsLayer();
 
-        function getNoElevationTrails() {
-            fetchNoElevationData("Etapp_11_wgs84.json").then(showNoElevationTrails);
-            fetchNoElevationData("Etapp_12_wgs84.json").then(showNoElevationTrails);
-            fetchNoElevationData("Etapp_13_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_14_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_15_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_16_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_17_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_19_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_20_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_21_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_22_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_Slinga_11_1_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_Slinga_12_1_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_Slinga_12_2_inkl_kolkoja_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("Etapp_Slinga_21_1_wgs84.json").then(showNoElevationTrails);
-			fetchNoElevationData("test.json").then(showNoElevationTrails);
+        function getHikingTrails() {
+            fetchHikingData("Etapp_11_wgs84.json").then(showHikingTrails);
+            fetchHikingData("Etapp_12_wgs84.json").then(showHikingTrails);
+            fetchHikingData("Etapp_13_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_14_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_15_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_16_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_17_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_19_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_20_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_21_wgs84.json").then(showHikingTrails);
+			fetchHikingData("Etapp_22_wgs84.json").then(showHikingTrails);
+            fetchHikingData("Walk_elevation_123547.json").then(showHikingTrails);
+			fetchHikingData("Walk_elevation_151851.json").then(showHikingTrails);				
         }
 
-        function getElevationTrails() {
-            fetchElevationData("Biking_elevation161008.json").then(showElevationTrails);
-            fetchElevationData("Walk_elevation_123547.json").then(showElevationTrails);
-			fetchElevationData("Walk_elevation_151851.json").then(showElevationTrails);
+        function getBikingTrails() {
+            fetchBikingData("Biking_elevation161008.json").then(showBikingTrails);
+			fetchBikingData("Etapp_Slinga_11_1_wgs84.json").then(showBikingTrails);
+			fetchBikingData("Etapp_Slinga_12_1_wgs84.json").then(showBikingTrails);
+			fetchBikingData("Etapp_Slinga_12_2_inkl_kolkoja_wgs84.json").then(showBikingTrails);
+			fetchBikingData("Etapp_Slinga_21_1_wgs84.json").then(showBikingTrails);
+
         }
 
-        function showNoElevationTrails(data) {
+        function showHikingTrails(data) {
             data.posts.forEach(post => {
                 var marker = new SimpleMarkerSymbol()
                     .setStyle(SimpleMarkerSymbol.STYLE_CIRCLE)
@@ -212,13 +212,13 @@ require([
                 let graphic = new Graphic(point, marker);
                 
                 var info = new InfoTemplate();
-                info.setTitle("Cykel- och vandringsleder");
+                info.setTitle("Vandringsled");
                 graphic.setInfoTemplate(info);
-                noElevationTrailsLayer.add(graphic);
+                hikingTrailsLayer.add(graphic);
             });
         }
-
-        function showElevationTrails(data) {
+		
+		function showBikingTrails(data) {
             data.posts.forEach(post => {
                 var marker = new SimpleMarkerSymbol()
                     .setStyle(SimpleMarkerSymbol.STYLE_CIRCLE)
@@ -231,9 +231,9 @@ require([
                 let graphic = new Graphic(point, marker);
                 
                 var info = new InfoTemplate();
-                info.setTitle("Cykel- och vandringsleder med höjd");
+                info.setTitle("Cykelled");
                 graphic.setInfoTemplate(info);
-                elevationTrailsLayer.add(graphic);
+                bikingTrailsLayer.add(graphic);
             });
         }
 
@@ -249,32 +249,32 @@ require([
             tempPOILayer.add(pointGraphic);
         });
 
-        var noElevationTrailsVisible = false;
-        var elevationTrailsVisible = false;
+        var hikingTrailsVisible = false;
+        var bikingTrailsVisible = false;
 
-        function toggleNoElevationTrails() {
-            if (noElevationTrailsVisible) {
-                map.removeLayer(noElevationTrailsLayer);
-                noElevationTrailsVisible = false;
+        function toggleHikingTrails() {
+            if (hikingTrailsVisible) {
+                map.removeLayer(hikingTrailsLayer);
+                hikingTrailsVisible = false;
             } else {
-                map.addLayer(noElevationTrailsLayer);
-                getNoElevationTrails();
-                noElevationTrailsVisible = true;
+                map.addLayer(hikingTrailsLayer);
+                getHikingTrails();
+                hikingTrailsVisible = true;
             }
         }
 
-        function toggleElevationTrails() {
-            if (elevationTrailsVisible) {
-                map.removeLayer(elevationTrailsLayer);
-                elevationTrailsVisible = false;
+        function toggleBikingTrails() {
+            if (bikingTrailsVisible) {
+                map.removeLayer(bikingTrailsLayer);
+                bikingTrailsVisible = false;
             } else {
-                map.addLayer(elevationTrailsLayer);
-                getElevationTrails();
-                elevationTrailsVisible = true;
+                map.addLayer(bikingTrailsLayer);
+                getBikingTrails();
+                bikingTrailsVisible = true;
             }
         }
 
-        document.getElementById("button1").addEventListener("click", toggleNoElevationTrails);
-        document.getElementById("button2").addEventListener("click", toggleElevationTrails);
+        document.getElementById("button1").addEventListener("click", toggleHikingTrails);
+        document.getElementById("button2").addEventListener("click", toggleBikingTrails);
     });
 });
