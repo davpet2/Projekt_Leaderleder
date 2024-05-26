@@ -43,7 +43,7 @@ require([
                     symbolUrl = "rastplats.png";
                     break;
                 case "Naturvärde":
-                    symbolUrl = "naturvärde.png";
+                    symbolUrl = "naturvardet.png";
                     break;
                 case "Naturreservat":
                     symbolUrl = "naturreservat.png";
