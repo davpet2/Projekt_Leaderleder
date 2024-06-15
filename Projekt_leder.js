@@ -250,7 +250,7 @@ require([
             
             // Prompt user for POI details
             var name = prompt("Enter POI name:");
-            var description = prompt("Enter POI description:");
+            var description = prompt("Enter a description for the POI (please capitalize the first letter):");
             var picture = prompt("Enter picture URL:");
             
             // Assign symbol based on description
