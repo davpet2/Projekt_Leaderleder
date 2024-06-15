@@ -32,5 +32,28 @@
 			<input type = "button" class = "poiButton" id = "button10" value = "Badplats">
 		</form>
 	</div>
+	
+	<div id="poiForm" style="display:none;">
+    <form>
+        <label for="poiName">Namn:</label>
+        <input type="text" id="poiName" name="poiName"><br>
+        <label for="poiDescription">Beskrivning:</label>
+        <input type="text" id="poiDescription" name="poiDescription"><br>
+        <label for="poiCategory">Kategori:</label>
+        <select id="poiCategory" name="poiCategory">
+            <option value="Rastplats">Rastplats</option>
+            <option value="Naturvärde">Naturvärde</option>
+            <option value="Naturreservat">Naturreservat</option>
+            <option value="Vindskydd">Vindskydd</option>
+            <option value="Cafe">Cafe</option>
+            <option value="Paddling">Paddling</option>
+            <option value="Grillplats">Grillplats</option>
+            <option value="Badplats">Badplats</option>
+        </select><br>
+        <label for="poiImage">Bild-URL:</label>
+        <input type="text" id="poiImage" name="poiImage"><br>
+        <button type="button" id="addPoiButton">Lägg till POI</button>
+    </form>
+  </div>
   </body>
 </html>
