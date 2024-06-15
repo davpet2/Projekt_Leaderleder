@@ -97,3 +97,23 @@ background-color: rgb(255, 255, 0);
 	background-size: cover;
 	text-indent: -9999px;
 }
+#poiForm{
+    position: absolute;
+    top: 95px;
+    left: 60px;
+    background-color: #ECF3F8;
+    padding: 10px;
+    border: 2px solid;
+	border-color: black;
+}
+#poiForm form{
+    display: flex;
+    flex-direction: column;
+}
+
+#poiForm label,
+#poiForm input,
+#poiForm select,
+#poiForm button{
+    margin-bottom: 3px;
+}
