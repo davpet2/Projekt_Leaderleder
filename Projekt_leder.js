@@ -247,6 +247,60 @@ require([
             
             var pointGraphic = new Graphic(poiMarker, markerSymbol);
             tempPOILayer.add(pointGraphic);
+            
+            // Prompt user for POI details
+            var name = prompt("Enter POI name:");
+            var description = prompt("Enter POI description:");
+            var picture = prompt("Enter picture URL:");
+            
+            // Assign symbol based on description
+            var symbolUrl;
+            switch (description) {
+                case "Rastplats":
+                    symbolUrl = "rastplats.png";
+                    break;
+                case "Naturvärde":
+                    symbolUrl = "naturvardet.png";
+                    break;
+                case "Naturreservat":
+                    symbolUrl = "naturreservat.png";
+                    break;
+                case "Vindskydd":
+                    symbolUrl = "vindskydd.png";
+                    break;
+                case "Cafe":
+                    symbolUrl = "cafe.png";
+                    break;
+                case "Paddling":
+                    symbolUrl = "paddla.png";
+                    break;
+                case "Grillplats":
+                    symbolUrl = "grillplats.png";
+                    break;
+                case "Badplats":
+                    symbolUrl = "badplats.png";
+                    break;
+                default:
+                    alert("Invalid description. POI not added.");
+                    tempPOILayer.remove(pointGraphic);
+                    return;
+            }
+
+            var customSymbol = new PictureMarkerSymbol({
+                "url": symbolUrl,
+                "width": 15,
+                "height": 15
+            });
+
+            var customGraphic = new Graphic(poiMarker, customSymbol);
+            customGraphic.setAttributes({
+                "name": name,
+                "Bild": picture,
+                "Beskrivning": description
+            });
+
+            customGraphic.setInfoTemplate(infoTemplate);
+            tempPOILayer.add(customGraphic);
         });
 
         var hikingTrailsVisible = false;
